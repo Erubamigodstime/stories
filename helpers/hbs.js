@@ -20,18 +20,7 @@ module.exports = {
     stripTag: function(input){
         return input.replace(/<(?:.|\n)*?>/gm, '');
     },
-    // editIcon: function(storyUser, loggedUser, storyId, floating = true){
-    //     if(storyUser.id.toString() == loggedUser.id.toString()){
-    //         if (floating) {
-    //             return `<a href="/stories/edit/${storyId}" class="btn btn-floating-halfway-fab blue"><i class
-    //             ="fas fa-edit fa-small"></i></a>`                
-    //         }
-    //         else {
-    //             return `<a href="/stories/edit/${storyId}"><i class="fas fa-edit"></i></a>`
-    //         }
-    //     }
-    // },
-
+  
     editIcon: function(storyUser, loggedUser, storyId, floating = true) {
         if (storyUser && loggedUser && storyUser._id && loggedUser._id && storyUser._id.toString() === loggedUser._id.toString()) {
             if (floating) {
